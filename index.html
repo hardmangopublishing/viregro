@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Viregro — Living Soil, Naturally</title>
+  <meta name="description" content="Viregro — natural soil-health products that support the living biology of your soil. Coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #1a3c28;
+      --green-mid: #2d5a3d;
+      --green-leaf: #3d7a4a;
+      --cream: #f7f3eb;
+      --gold: #c4a35a;
+      --text: #1c1c1c;
+      --muted: #5a5a5a;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --cream: #14150f;
+        --text: #ece7da;
+        --muted: #b3ac9b;
+      }
+    }
+    :root[data-theme="dark"] {
+      --cream: #14150f;
+      --text: #ece7da;
+      --muted: #b3ac9b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+      min-height: 100%;
+    }
+    .hero {
+      min-height: 82vh;
+      background:
+        linear-gradient(180deg, rgba(26,60,40,0.72) 0%, rgba(26,60,40,0.88) 100%),
+        radial-gradient(ellipse at 70% 35%, rgba(196,163,90,0.30), transparent 55%),
+        var(--green-dark);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 18% 82%, rgba(61,122,74,0.45) 0%, transparent 42%),
+        radial-gradient(circle at 86% 18%, rgba(196,163,90,0.22) 0%, transparent 38%);
+      pointer-events: none;
+    }
+    .leaf-motif { font-size: 3.2rem; margin-bottom: 0.6rem; opacity: 0.92; position: relative; }
+    .company {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 11vw, 6rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      position: relative;
+    }
+    .tagline {
+      margin-top: 1.35rem;
+      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+      font-weight: 500;
+      max-width: 30rem;
+      letter-spacing: 0.03em;
+      color: #e8e0d0;
+      position: relative;
+    }
+    .gold-line { width: 90px; height: 2px; background: var(--gold); margin: 1.6rem auto; position: relative; }
+    .badge {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      position: relative;
+    }
+    section { max-width: 640px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+    h2 { font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--green-leaf); margin-bottom: 1rem; }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    .lead { font-size: 1.1rem; }
+    .contact-line { margin-top: 1.5rem; font-size: 1.05rem; color: var(--text); }
+    .contact-line a { color: var(--green-leaf); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
+    .contact-line a:hover { color: var(--green-mid); }
+    footer {
+      background: var(--green-dark);
+      color: #c9c2b4;
+      text-align: center;
+      padding: 2.25rem 1.5rem calc(2.25rem + env(safe-area-inset-bottom, 0px));
+      font-size: 0.85rem;
+    }
+    footer strong { color: #fff; font-family: "Cormorant Garamond", serif; font-size: 1.2rem; display: block; margin-bottom: 0.4rem; letter-spacing: 0.03em; }
+    footer .muted-note { opacity: 0.7; font-size: 0.78rem; margin-top: 0.6rem; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="leaf-motif" aria-hidden="true">🌿</div>
+    <h1 class="company">Viregro</h1>
+    <div class="gold-line"></div>
+    <p class="tagline">Living soil, naturally. Natural products that feed the biology already in your ground.</p>
+    <div class="badge">Coming Soon</div>
+  </header>
+
+  <section id="about">
+    <h2>Rooted in living soil</h2>
+    <p class="lead">
+      Viregro is a natural, plant-derived approach to soil health — built on the idea that the
+      healthiest ground already contains what it needs, and the job is to support that living
+      biology rather than override it.
+    </p>
+    <p>
+      We're preparing our first products now. This page is a placeholder while we finalize the
+      details. Check back soon.
+    </p>
+    <p class="contact-line">
+      For more information, contact us at
+      <a href="mailto:info@viregro.com">info@viregro.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    <strong>Viregro</strong>
+    Natural soil-health products · South Florida<br>
+    <a href="mailto:info@viregro.com" style="color:#e8e0d0;text-decoration:none;border-bottom:1px solid var(--gold);">info@viregro.com</a>
+    <div class="muted-note">© <span id="yr"></span> Viregro. All rights reserved. Site under construction.</div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
