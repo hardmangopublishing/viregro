@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Viregro — Living Soil, Naturally</title>
-  <meta name="description" content="Viregro — natural soil-health products that support the living biology of your soil. Coming soon." />
+  <title>Viregro — Living Soil &amp; Water, Naturally</title>
+  <meta name="description" content="Viregro — natural, plant-derived products for septic &amp; grease-trap care and soil health. Coming soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +14,8 @@
       --green-mid: #2d5a3d;
       --green-leaf: #3d7a4a;
       --cream: #f7f3eb;
+      --card: #ffffff;
+      --border: #e4ddd0;
       --gold: #c4a35a;
       --text: #1c1c1c;
       --muted: #5a5a5a;
@@ -23,45 +25,32 @@
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --cream: #14150f;
-        --text: #ece7da;
-        --muted: #b3ac9b;
+        --cream: #14150f; --card: #1e1f17; --border: #33352a;
+        --text: #ece7da; --muted: #b3ac9b; --green-leaf: #6ba377;
       }
     }
     :root[data-theme="dark"] {
-      --cream: #14150f;
-      --text: #ece7da;
-      --muted: #b3ac9b;
+      --cream: #14150f; --card: #1e1f17; --border: #33352a;
+      --text: #ece7da; --muted: #b3ac9b; --green-leaf: #6ba377;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-padding-top: env(safe-area-inset-top, 0px); }
     body {
       font-family: "Source Sans 3", system-ui, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.6;
-      min-height: 100%;
+      color: var(--text); background: var(--cream); line-height: 1.6; min-height: 100%;
     }
     .hero {
-      min-height: 82vh;
+      min-height: 80vh;
       background:
         linear-gradient(180deg, rgba(26,60,40,0.72) 0%, rgba(26,60,40,0.88) 100%),
         radial-gradient(ellipse at 70% 35%, rgba(196,163,90,0.30), transparent 55%),
         var(--green-dark);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 1.5rem 3rem;
-      position: relative;
-      overflow: hidden;
+      color: #fff; display: flex; flex-direction: column; justify-content: center;
+      align-items: center; text-align: center; padding: 4rem 1.5rem 3rem;
+      position: relative; overflow: hidden;
     }
     .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+      content: ""; position: absolute; inset: 0;
       background-image:
         radial-gradient(circle at 18% 82%, rgba(61,122,74,0.45) 0%, transparent 42%),
         radial-gradient(circle at 86% 18%, rgba(196,163,90,0.22) 0%, transparent 38%);
@@ -69,47 +58,62 @@
     }
     .leaf-motif { font-size: 3.2rem; margin-bottom: 0.6rem; opacity: 0.92; position: relative; }
     .company {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 11vw, 6rem);
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      line-height: 1;
-      position: relative;
+      font-family: "Cormorant Garamond", serif; font-size: clamp(3rem, 11vw, 6rem);
+      font-weight: 700; letter-spacing: 0.03em; line-height: 1; position: relative;
     }
     .tagline {
-      margin-top: 1.35rem;
-      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-      font-weight: 500;
-      max-width: 30rem;
-      letter-spacing: 0.03em;
-      color: #e8e0d0;
-      position: relative;
+      margin-top: 1.35rem; font-size: clamp(1.05rem, 2.4vw, 1.4rem); font-weight: 500;
+      max-width: 32rem; letter-spacing: 0.03em; color: #e8e0d0; position: relative;
     }
     .gold-line { width: 90px; height: 2px; background: var(--gold); margin: 1.6rem auto; position: relative; }
     .badge {
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-      position: relative;
+      margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; position: relative;
     }
-    section { max-width: 640px; margin: 0 auto; padding: 3.5rem 1.5rem; }
-    h2 { font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--green-leaf); margin-bottom: 1rem; }
+    section { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+    section.narrow { max-width: 640px; }
+    h2 {
+      font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--green-leaf);
+      margin-bottom: 1rem; text-align: center;
+    }
+    .section-intro { text-align: center; color: var(--muted); max-width: 34rem; margin: 0 auto 2rem; }
     p { color: var(--muted); margin-bottom: 1rem; }
     .lead { font-size: 1.1rem; }
-    .contact-line { margin-top: 1.5rem; font-size: 1.05rem; color: var(--text); }
-    .contact-line a { color: var(--green-leaf); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
-    .contact-line a:hover { color: var(--green-mid); }
+    .card-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+    @media (min-width: 620px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+    .product-card {
+      background: var(--card); border: 1px solid var(--border); border-top: 4px solid var(--green-mid);
+      padding: 1.75rem; display: flex; flex-direction: column;
+    }
+    .product-card .icon { font-size: 2rem; margin-bottom: 0.6rem; }
+    .product-card h3 {
+      font-family: "Cormorant Garamond", serif; font-size: 1.5rem; color: var(--green-leaf); margin-bottom: 0.5rem;
+    }
+    .product-card .kicker {
+      font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 0.75rem;
+    }
+    .product-card p { font-size: 0.98rem; }
+    .approach-list { list-style: none; display: grid; gap: 1rem; margin-top: 0.5rem; }
+    .approach-list li { padding-left: 1.75rem; position: relative; color: var(--muted); }
+    .approach-list li::before { content: "\1F33F"; position: absolute; left: 0; top: 0; font-size: 1rem; }
+    .approach-list strong { color: var(--text); }
+    .notify { background: var(--green-dark); color: #e8e0d0; text-align: center; padding: 3rem 1.5rem; }
+    .notify h2 { color: #fff; }
+    .notify p { color: #cdc6b6; max-width: 32rem; margin: 0 auto 1.25rem; }
+    .notify a.btn {
+      display: inline-block; background: var(--gold); color: #1a3c28; font-weight: 600;
+      text-decoration: none; padding: 0.75rem 1.75rem; letter-spacing: 0.03em; border-radius: 2px;
+    }
+    .notify a.btn:hover { filter: brightness(1.08); }
+    .contact-line { margin-top: 1.5rem; font-size: 1.05rem; text-align: center; }
+    .contact-line a { font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
     footer {
-      background: var(--green-dark);
-      color: #c9c2b4;
-      text-align: center;
-      padding: 2.25rem 1.5rem calc(2.25rem + env(safe-area-inset-bottom, 0px));
-      font-size: 0.85rem;
+      background: var(--green-dark); color: #c9c2b4; text-align: center;
+      padding: 2.25rem 1.5rem calc(2.25rem + env(safe-area-inset-bottom, 0px)); font-size: 0.85rem;
     }
     footer strong { color: #fff; font-family: "Cormorant Garamond", serif; font-size: 1.2rem; display: block; margin-bottom: 0.4rem; letter-spacing: 0.03em; }
+    footer a { color: #e8e0d0; text-decoration: none; border-bottom: 1px solid var(--gold); }
     footer .muted-note { opacity: 0.7; font-size: 0.78rem; margin-top: 0.6rem; }
   </style>
 </head>
@@ -118,31 +122,63 @@
     <div class="leaf-motif" aria-hidden="true">🌿</div>
     <h1 class="company">Viregro</h1>
     <div class="gold-line"></div>
-    <p class="tagline">Living soil, naturally. Natural products that feed the biology already in your ground.</p>
+    <p class="tagline">Natural, plant-derived care for your soil and water systems — working with nature, not against it.</p>
     <div class="badge">Coming Soon</div>
   </header>
 
-  <section id="about">
-    <h2>Rooted in living soil</h2>
-    <p class="lead">
-      Viregro is a natural, plant-derived approach to soil health — built on the idea that the
-      healthiest ground already contains what it needs, and the job is to support that living
-      biology rather than override it.
+  <section class="narrow" id="about">
+    <h2>Our approach</h2>
+    <p class="lead" style="text-align:center;">
+      Viregro is built on a simple idea: healthy soil and water systems already contain living
+      biology that does the real work. Our products are designed to support that biology rather
+      than overpower it with harsh chemicals.
     </p>
-    <p>
-      We're preparing our first products now. This page is a placeholder while we finalize the
-      details. Check back soon.
-    </p>
-    <p class="contact-line">
-      For more information, contact us at
-      <a href="mailto:info@viregro.com">info@viregro.com</a>.
-    </p>
+    <ul class="approach-list">
+      <li><strong>Natural &amp; plant-derived.</strong> Made from natural ingredients — no harsh synthetic chemicals.</li>
+      <li><strong>Works with living systems.</strong> Designed to support the microorganisms already present in soil, septic systems, and drain lines.</li>
+      <li><strong>Made in Florida.</strong> Formulated and produced in the U.S.</li>
+    </ul>
   </section>
+
+  <section id="products">
+    <h2>What's coming</h2>
+    <p class="section-intro">We're preparing two lines of natural products. Details and availability to follow.</p>
+    <div class="card-grid">
+      <div class="product-card">
+        <div class="icon" aria-hidden="true">💧</div>
+        <div class="kicker">Septic &amp; Grease-Trap Care</div>
+        <h3>For your systems</h3>
+        <p>
+          A natural, biological approach to routine maintenance of septic systems, drain lines,
+          and grease traps — supporting the microorganisms that keep everything flowing and
+          helping manage odor.
+        </p>
+      </div>
+      <div class="product-card">
+        <div class="icon" aria-hidden="true">🌱</div>
+        <div class="kicker">Soil &amp; Garden</div>
+        <h3>For your ground</h3>
+        <p>
+          Natural products designed to support the living biology in your soil — for gardeners
+          and growers who prefer to work with nature. More details to come.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="notify">
+    <h2>Be the first to know</h2>
+    <p>We're finalizing our first products now. Want to hear when Viregro launches? Send us a note and we'll keep you posted.</p>
+    <a class="btn" href="mailto:info@viregro.com?subject=Notify%20me%20about%20Viregro">Email us to stay updated</a>
+    <p class="contact-line" style="color:#e8e0d0;">
+      Or reach us any time at <a href="mailto:info@viregro.com" style="color:#e8e0d0;">info@viregro.com</a>.
+    </p>
+  </div>
 
   <footer>
     <strong>Viregro</strong>
-    Natural soil-health products · South Florida<br>
-    <a href="mailto:info@viregro.com" style="color:#e8e0d0;text-decoration:none;border-bottom:1px solid var(--gold);">info@viregro.com</a>
+    Natural products for soil &amp; water systems · South Florida<br>
+    <a href="mailto:info@viregro.com">info@viregro.com</a>
     <div class="muted-note">© <span id="yr"></span> Viregro. All rights reserved. Site under construction.</div>
   </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
